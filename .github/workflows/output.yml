@@ -4,7 +4,5 @@ jobs:
   info:
     runs-on: ubuntu-latest
     steps:
-      - name: Output Github Context
-        run: echo "The event that triggered this action was ${{ toJSON(github) }}"
-      - name: Issues
-        run: echo "The issue that triggered this action was ${{ toJSON(github.event.issue) }}"
+      - name: Output Event Details
+        run: echo "${{ toJSON(github.event) }}"
